@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EventDetailActivity">
+    ​
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        ​
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            app:contentScrim="@android:color/white">
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/vp_event_detail_img"
+                app:layout_collapseMode="pin">
+
+            </android.support.v4.view.ViewPager>
+            ​
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:title=""/>
+            ​
+        </android.support.design.widget.CollapsingToolbarLayout>
+        ​
+        ​
+    </android.support.design.widget.AppBarLayout>
+    ​
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+        android:layout_height="match_parent">
+        ​
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            ​
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:paddingLeft="@dimen/margin_medium_2"
+                android:paddingRight="@dimen/margin_medium_2"
+                android:text="Dance"
+                android:textColor="@android:color/white" />
+            ​
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvCategory"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_toEndOf="@id/tvCategory"
+                android:text="25 Jul'18 at 11:00am - 2:00pm" />
+            ​
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvEventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCategory"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="John's Wedding Party"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_heading_1x"
+                android:textStyle="bold" />
+            ​
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_tag_image"
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                android:layout_below="@id/tvEventTitle"
+                android:layout_alignStart="@id/tvEventTitle"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:src="@color/colorPrimaryDark" />
+            ​
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEventTitle"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_toEndOf="@id/iv_tag_image"
+                android:text="Save up to 50% off tickets"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+            ​
+            <LinearLayout
+                android:id="@+id/llRequirements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_tag_image"
+                android:layout_marginTop="@dimen/margin_large"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_medium_2"
+                android:paddingRight="@dimen/margin_medium_2"
+                android:weightSum="4">
+                ​
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    ​
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/ivRequirementOne"
+                        android:layout_width="@dimen/margin_xlarge"
+                        android:layout_height="@dimen/margin_xlarge"
+                        android:layout_centerHorizontal="true"
+                        android:src="@color/colorPrimaryDark" />
+                    ​
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivRequirementOne"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="18 - 25"
+                        android:textSize="@dimen/text_regular_2x" />
+                    ​
+                </RelativeLayout>
+                ​
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    ​
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/ivRequirementTwo"
+                        android:layout_width="@dimen/margin_xlarge"
+                        android:layout_height="@dimen/margin_xlarge"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/gender_male" />
+                    ​
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivRequirementTwo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="Female"
+                        android:textSize="@dimen/text_regular_2x" />
+                    ​
+                </RelativeLayout>
+                ​
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    ​
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/ivRequirementThree"
+                        android:layout_width="@dimen/margin_xlarge"
+                        android:layout_height="@dimen/margin_xlarge"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/gender_male" />
+                    ​
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivRequirementThree"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="Public"
+                        android:textSize="@dimen/text_regular_2x" />
+                    ​
+                </RelativeLayout>
+                ​
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    ​
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/ivRequirementFour"
+                        android:layout_width="@dimen/margin_xlarge"
+                        android:layout_height="@dimen/margin_xlarge"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/gender_male" />
+                    ​
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivRequirementFour"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="30"
+                        android:textSize="@dimen/text_regular_2x" />
+                    ​
+                </RelativeLayout>
+                ​
+            </LinearLayout>
+            ​
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llRequirements"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:text="We believe in enjoing life to the fullest without having to compromise anything.
+			At John's Wedding Party, there will be beer, barbecues and a pool party too.
+			No need to worry as John will make sure to provide all of these facilities.
+			All you have to do is enjoy your drinks and dance."
+                android:textColor="@android:color/black" />
+            ​
+        </RelativeLayout>
+        ​
+    </android.support.v4.widget.NestedScrollView>
+    ​
+    ​
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:paddingLeft="@dimen/margin_medium_2"
+        android:paddingRight="@dimen/margin_medium_2"
+        android:text="Upcoming"
+        android:elevation="@dimen/margin_small_n"
+        android:textColor="@android:color/white"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|right" />
+    ​
+    ​
+</android.support.design.widget.CoordinatorLayout>

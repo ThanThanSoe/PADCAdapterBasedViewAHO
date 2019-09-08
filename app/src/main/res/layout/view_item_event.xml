@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/greetings_03"
+            android:scaleType="centerCrop"
+            android:id="@+id/img_profile"/>
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:text="Birthday Party"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:layout_toEndOf="@id/img_profile"/>
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_time"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="12sp"
+            android:textColor="@color/blue"
+            android:text="06:00 PM - 8:00 PM"
+            android:layout_toEndOf="@id/img_profile"
+            android:layout_below="@id/text_name"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/gender_male"
+            android:scaleType="fitEnd"
+            android:id="@+id/img_gender"
+            android:layout_alignParentRight="true"/>
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_age_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_gender"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorBlack"
+            android:text="18-25"/>
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_shop_name"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:layout_below="@+id/img_profile"
+            android:text="Yangon Yangon BBQ"
+            android:textStyle="bold"/>
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_address"
+            android:layout_below="@+id/text_shop_name"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:text="Apartment 021, Building No. 4, Upper Pazundaung Township, Yangon."/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/img_profile_2"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/text_address"
+            android:src="@color/colorPrimary"/>
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_name_2"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:layout_toEndOf="@+id/img_profile_2"
+            android:layout_below="@+id/text_address"
+            android:text="John T.Lord"
+            android:textStyle="bold"/>
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_profile_2"
+            android:layout_below="@+id/text_name_2"
+            android:layout_toEndOf="@+id/img_profile_2"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:text="Organizer"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
